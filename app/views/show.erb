@@ -1,0 +1,12 @@
+<h1><%= @puppy.name%></h1>
+<h2> <%="Breed: #{@puppy.breed}" %> </h2>
+
+<form action="/puppies/<%=@puppy.id%>/edit" method="get">
+    <input type="submit" value="Edit Puppy">
+</form>
+
+<form action="/puppies/<%=@puppy.id%>" method="post">
+    <input type="hidden" name="_method" value="delete"/>
+    <input type="submit" value="Delete Puppy">
+</form>
+

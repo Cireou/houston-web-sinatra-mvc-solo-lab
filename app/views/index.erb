@@ -1,0 +1,11 @@
+<h1> Puppies </h1>
+
+<%@puppies.each {|puppy|%>
+    <ul>
+        <li> <a href = <%="/puppies/#{puppy.id}" %>> <%= puppy.name%> </a> </li>
+    </ul>
+<%}%>
+
+<form action="/puppies/new" method="get">
+<input type="submit" value="Add Puppy">
+</form>
